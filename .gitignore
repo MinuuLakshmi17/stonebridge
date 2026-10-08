@@ -1,0 +1,5 @@
+bin/
+stonebridge-data/
+*.sst
+*.wal
+*.tmp

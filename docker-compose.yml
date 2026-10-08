@@ -1,0 +1,10 @@
+services:
+  stonebridge:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - stonebridge-data:/data
+    restart: unless-stopped
+volumes:
+  stonebridge-data:
