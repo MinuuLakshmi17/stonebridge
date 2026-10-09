@@ -97,7 +97,7 @@ Keys are URL path segments (percent-decoding applied); values in the HTTP API ar
 ## Benchmarks
 
 <p align="justify">
-Measured with the bundled benchmark (<code>go run ./cmd/bench</code>): 50,000 puts of 100-byte values followed by 50,000 point reads and 10,000 missing-key lookups, on this machine with WAL fsync disabled for the write measurement. These numbers characterize this implementation at modest scale with default tuning; they are reproducible, not a claim about production databases.
+Measured with the bundled benchmark (<code>go run ./cmd/bench</code>): 50,000 puts of 100-byte values followed by 50,000 point reads and 10,000 missing-key lookups, single-threaded on a 2-vCPU AMD EPYC 9D25 cloud VM with 8 GB RAM, with WAL fsync disabled for the write measurement. These numbers characterize this implementation at modest scale on modest hardware with default tuning; they are reproducible, not a claim about production databases.
 </p>
 
 | Operation | Throughput |
